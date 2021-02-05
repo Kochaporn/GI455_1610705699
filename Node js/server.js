@@ -4,7 +4,7 @@ var callbackInitServer = ()=>{
     console.log("hanzserver is running.");
 }
 
-var wss = new websocket.Server({port:25500}, callbackInitServer);
+var wss = new websocket.Server({port:5500}, callbackInitServer);
 
 var wslist = [];
 
@@ -28,7 +28,7 @@ wss.on("connection", (ws)=>{
 
 function ArrayRemove(arr, value)
 {
-    return arr.fillter((element)=>{
+    return arr.filter((element)=>{
         return element != value;
     })
 }
